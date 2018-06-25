@@ -13,4 +13,8 @@ export class AppComponent {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ){}
+
+  clickEvent() {
+    console.log("Clicked");
+  }
 }

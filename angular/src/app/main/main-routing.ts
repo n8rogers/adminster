@@ -1,10 +1,15 @@
 import { MainComponent } from "./main.component";
 import { RouterModule, Routes } from "@angular/router";
-import { ModuleWithProviders } from "@angular/compiler/src/core";
+import { NgModule } from "@angular/core";
 
 
 const routes: Routes = [
-    { path: '', component: MainComponent }
+    { path: 'main', component: MainComponent }
 ]
 
-export const routing: ModuleWithProviders = RouterModule.forChild(routes);
+@NgModule({
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
+})
+
+export class MainRoutingModule {}
